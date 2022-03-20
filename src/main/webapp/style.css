@@ -9,7 +9,6 @@
 .navbar{
     flex: 2;
 }
-
 li {
     display: inline;
     float: right;

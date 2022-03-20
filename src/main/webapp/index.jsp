@@ -27,7 +27,7 @@
         <p style="padding-left: 25px">Historischer Verlauf</p>
     </div>
     <div class="image">
-        <a href="laender.xhtml">
+        <a href="country_table.xhtml">
             <img class="icons" src="icons/graph.png" alt="logo" width="128" height="128"/><br/>
         </a>
         <p style="padding-left: 20px">Austoß nach Ländern</p>

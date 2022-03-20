@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+    <title>Länder</title>
+    <link href="style.css" rel="stylesheet" />
+</h:head>
+
+
+<f:view>
+
+    <div class="container">
+        <div class="logo">
+            <img src="icons/co2-cloud.png" alt="logo" width="120" height="120" style="line-height: 0px"/>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="#start">Startseite</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+                <li><a href="#english">Englisch</a></li>
+                <li><a href="#impressum">Impressum</a></li>
+            </ul>
+        </div>
+    </div>
+    <h:form>
+        <div class="card">
+            <p:dataTable var="country" value="#{dataset.countries}">
+                <p:column headerText="Name">
+                    <h:outputText value="#{country.name}" />
+                </p:column>
+
+                <p:column headerText="Amount">
+                    <h:outputText value="#{country.amount}" />
+                </p:column>
+
+<!--                <p:column headerText="Category">-->
+<!--                    <h:outputText value="#{product.category}" />-->
+<!--                </p:column>-->
+
+<!--                <p:column headerText="Quantity">-->
+<!--                    <h:outputText value="#{product.quantity}" />-->
+<!--                </p:column>-->
+            </p:dataTable>
+        </div>
+    </h:form>
+</f:view>
+</html>
