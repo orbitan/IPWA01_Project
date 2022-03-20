@@ -1,0 +1,54 @@
+.header {
+    display: flex;
+}
+
+.logo{
+    flex: 1;
+
+}
+.navbar{
+    flex: 2;
+}
+
+li {
+    display: inline;
+    float: right;
+    padding: 10px;
+}
+.container-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: linear-gradient(to right, lightgray, white);
+}
+.icons {
+    padding: 50px 25px;
+}
+
+
+.image:hover {
+    -moz-box-shadow: 0 0 10px green;
+    -webkit-box-shadow: 0 0 10px green;
+    box-shadow: 0 0 10px green;
+}
+
+table.country {
+    border-collapse: collapse;
+}
+tr:nth-child(even) {
+    background-color: lightgray;
+}
+tr:hover {
+    background-color: lightslategray;
+}
+
+th, td {
+    border: 1px solid lightslategray;
+    padding: 3px;
+    padding-left: 8px;
+    text-align: left;
+}
+
+
+
+
