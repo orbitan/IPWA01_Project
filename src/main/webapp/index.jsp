@@ -6,21 +6,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="wrapper">
-    <div class="container">
-        <div class="logo">
-            <img src="icons/co2-cloud.png" alt="logo" width="120" height="120" style="line-height: 0px"/>
-            <div class="navbar">
-                <ul>
-                    <li><a href="index.jsp">Startseite</a></li>
-                    <li><a href="#kontakt">Kontakt</a></li>
-                    <li><a href="#english">Englisch</a></li>
-                    <li><a href="#impressum">Impressum</a></li>
-                </ul>
-            </div>
-        </div>
+<div class="container">
+    <div class="logo">
+        <img src="icons/co2-cloud.png" alt="logo" width="120" height="120" style="line-height: 0px"/>
+    </div>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.jsp">Startseite</a></li>
+            <li><a href="#kontakt">Kontakt</a></li>
+            <li><a href="#english">Englisch</a></li>
+            <li><a href="#impressum">Impressum</a></li>
+        </ul>
     </div>
 </div>
+
 
 <div class="container-2">
     <div class="image">

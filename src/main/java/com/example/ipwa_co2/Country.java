@@ -27,12 +27,16 @@ public class Country {
         this.name = name;
     }
 
-    public Long getAmount() {
+    public Long getLAmount() {
         if (amount.get(55) == 0){
             return null;
         } else {
             return amount.get(55);
         }
+    }
+
+    public List<Long> getAmount(){
+        return amount;
     }
 
     public void setAmount(List<Long> amount) {

@@ -4,11 +4,12 @@
 
 .logo{
     flex: 1;
+    display: inline;
 
 }
 .navbar{
-    flex: 2;
-    vertical-align: top;
+    float:right; display:inline; width: 49%;
+
 
 }
 .container {
