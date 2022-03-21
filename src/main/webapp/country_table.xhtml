@@ -20,22 +20,22 @@
             <img src="icons/co2-cloud.png" alt="logo" width="120" height="120" style="line-height: 0px"/>
         </div>
         <div class="navbar">
-            <ul>
-                <li><a href="#start">Startseite</a></li>
+            <ol>
+                <li><a href="index.jsp">Startseite</a></li>
                 <li><a href="#kontakt">Kontakt</a></li>
                 <li><a href="#english">Englisch</a></li>
                 <li><a href="#impressum">Impressum</a></li>
-            </ul>
+            </ol>
         </div>
     </div>
     <h:form>
         <div class="card">
-            <p:dataTable var="country" value="#{dataset.countries}">
-                <p:column headerText="Name">
+            <p:dataTable var="country" value="#{dataset.countries}" sortMode="single" allowUnsorting="false">
+                <p:column sortBy="#{country.name}" headerText="Name">
                     <h:outputText value="#{country.name}" />
                 </p:column>
 
-                <p:column headerText="Amount">
+                <p:column sortBy="#{country.amount}" headerText="Amount">
                     <h:outputText value="#{country.amount}" />
                 </p:column>
 

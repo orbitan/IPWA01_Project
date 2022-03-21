@@ -8,7 +8,21 @@
 }
 .navbar{
     flex: 2;
+    vertical-align: top;
+
 }
+.container {
+    grid-row: 1;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+
 li {
     display: inline;
     float: right;
