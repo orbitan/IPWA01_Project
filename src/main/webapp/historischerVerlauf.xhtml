@@ -31,15 +31,17 @@
         </div>
     </div>
     <div class="container-3">
-        <h:outputLabel style="margin: auto;" id="name" value="#{lineChartBean.country.name}" size="40"/>
-        <div class="p-field p-col-12 p-md-4">
-            <p:outputLabel for="@next" value="Grouping"/>
-            <p:outputLabel for="@next" value="Editable"/>
-            <p:selectOneMenu id="country" value="#{lineChartBean.country.name}" effect="fold" editable="true">
-                <f:selectItem itemLabel="Select One" itemValue=""/>
+        <h:panelGrid columns="2" cellpadding="5">
+            <p:outputLabel for="country" value="Country: "/>
+            <p:selectOneMenu id="country" value="#{lineChartBean.country}" style="width:150px">
+<!--                <p:ajax listener="#{basicView.onCountryChange}" update="city"/>-->
+                <f:selectItem itemLabel="Select Country" itemValue="" noSelectionOption="true"/>
                 <f:selectItems value="#{lineChartBean.country.name}"/>
             </p:selectOneMenu>
-        </div>
+
+
+        </h:panelGrid>
+        <h:outputLabel style="margin: auto;" id="name" value="#{lineChartBean.country.name}" size="40"/>
         <p:chart type="line"  model="#{lineChartBean.lineModel}" style="height:400px;width:1000px;margin: auto"/>
         <h:form style="margin: auto;">
             <h:commandLink style="padding: 20px" value="zurück" action="#{lineChartBean.zurueck()}"/>

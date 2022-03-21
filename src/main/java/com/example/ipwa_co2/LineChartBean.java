@@ -17,11 +17,18 @@ import java.util.List;
 @ViewScoped
 public class LineChartBean {
     private LineChartModel lineModel;
+    private String name = "hss";
     private int index;
+
 
     public Country getCountry(){
         return Dataset.getInstance().getCountries().get(index);
     }
+
+    public List<Country> getCountries(){
+        return Dataset.getInstance().getCountries();
+    }
+
 
     public void vor(){
         if (index < Dataset.getInstance().getCountries().size()-1){
@@ -80,8 +87,14 @@ public class LineChartBean {
         x.setTickInterval("4");
         x.setLabel("Jahr");
 
+
+
     }
     public LineChartModel getLineModel() {
         return lineModel;
+    }
+
+    public String getName() {
+        return name;
     }
 }
