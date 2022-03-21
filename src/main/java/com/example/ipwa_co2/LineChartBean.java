@@ -46,6 +46,7 @@ public class LineChartBean {
     public void init() {
         lineModel = new LineChartModel();
         LineChartSeries s = new LineChartSeries();
+        s.setSmoothLine(true);
 
         Country c = this.getCountry();
         Long y_max = Collections.max(c.getAmount(), null);
@@ -63,6 +64,7 @@ public class LineChartBean {
         }
         lineModel.addSeries(s);
         lineModel.setLegendPosition("e");
+
 
         Axis y = lineModel.getAxis(AxisType.Y);
         y.setTickInterval(String.valueOf(y_max/4));

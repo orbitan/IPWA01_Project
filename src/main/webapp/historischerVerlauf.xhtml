@@ -17,7 +17,9 @@
 
     <div class="container">
         <div class="logo">
-            <img src="icons/co2-cloud.png" alt="logo" width="120" height="120" style="line-height: 0px"/>
+            <a href="index.jsp">
+                <img src="icons/co2-cloud.png" alt="logo" width="120" height="120" style="line-height: 0px"/>
+            </a>
         </div>
         <div class="navbar">
             <ol>
@@ -28,11 +30,19 @@
             </ol>
         </div>
     </div>
-    <div class="container-2" style="padding: 80px">
-        <h:outputLabel id="name" value="#{lineChartBean.country.name}" size="40" style="padding-left: 500"/>
-        <h:form>
-            <p:chart type="line" model="#{lineChartBean.lineModel}" style="height:400px;width:1000px"/>
-            <h:commandLink value="zurück" action="#{lineChartBean.zurueck()}"/>
+    <div class="container-3">
+        <h:outputLabel style="margin: auto;" id="name" value="#{lineChartBean.country.name}" size="40"/>
+        <div class="p-field p-col-12 p-md-4">
+            <p:outputLabel for="@next" value="Grouping"/>
+            <p:outputLabel for="@next" value="Editable"/>
+            <p:selectOneMenu id="country" value="#{lineChartBean.country.name}" effect="fold" editable="true">
+                <f:selectItem itemLabel="Select One" itemValue=""/>
+                <f:selectItems value="#{lineChartBean.country.name}"/>
+            </p:selectOneMenu>
+        </div>
+        <p:chart type="line"  model="#{lineChartBean.lineModel}" style="height:400px;width:1000px;margin: auto"/>
+        <h:form style="margin: auto;">
+            <h:commandLink style="padding: 20px" value="zurück" action="#{lineChartBean.zurueck()}"/>
             <h:commandLink value="vor" action="#{lineChartBean.vor()}"/>
         </h:form>
 

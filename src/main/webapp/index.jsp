@@ -8,7 +8,12 @@
 <body>
 <div class="container">
     <div class="logo">
-        <img src="icons/co2-cloud.png" alt="logo" width="120" height="120" style="line-height: 0px"/>
+        <a href="index.jsp">
+            <img src="icons/co2-cloud.png" alt="logo" width="120" height="120" style="line-height: 0px"/>
+        </a>
+
+
+
     </div>
     <div class="navbar">
         <ul>
