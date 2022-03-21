@@ -50,7 +50,7 @@ public class LineChartBean {
         Country c = this.getCountry();
         Long y_max = Collections.max(c.getAmount(), null);
 
-        s.setLabel("Population");
+        s.setLabel("Kilotonnen Co2");
 
 
         int k = 1960;
@@ -63,17 +63,20 @@ public class LineChartBean {
         }
         lineModel.addSeries(s);
         lineModel.setLegendPosition("e");
+
         Axis y = lineModel.getAxis(AxisType.Y);
-        y.setTickInterval(String.valueOf(y_max/5));
+        y.setTickInterval(String.valueOf(y_max/4));
+        y.setTickCount(5);
         y.setMin(0);
-        y.setMax(y_max.toString());
-        y.setLabel("Millions");
+        y.setMax(y_max + y_max/100*5);
+        y.setLabel("Kilotonnen");
 
         Axis x = lineModel.getAxis(AxisType.X);
+
         x.setMin(1960);
         x.setMax(2020);
         x.setTickInterval("4");
-        x.setLabel("Number of Years");
+        x.setLabel("Jahr");
 
     }
     public LineChartModel getLineModel() {

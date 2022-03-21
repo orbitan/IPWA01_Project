@@ -22,13 +22,13 @@
 
 
 <div class="container-2">
-    <div class="image">
+    <div class="image" style="padding: 100px">
         <a href="historischerVerlauf.xhtml">
             <img class="icons" alt="icon" src="icons/time_line.png" width="128" height="128"/><br/>
         </a>
         <p style="padding-left: 25px">Historischer Verlauf</p>
     </div>
-    <div class="image">
+    <div class="image" style="padding: 100px">
         <a href="country_table.xhtml">
             <img class="icons" src="icons/graph.png" alt="logo" width="128" height="128"/><br/>
         </a>

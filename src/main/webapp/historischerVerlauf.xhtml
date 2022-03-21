@@ -28,16 +28,15 @@
             </ol>
         </div>
     </div>
-    <h:form>
-        <h:panelGrid columns="2">
-            <h:commandLink value="zurück" action="#{lineChartBean.zurueck()}"/>
-            <p:chart type="line" model="#{lineChartBean.lineModel}" style="height:600px;width:1000px"/>
-            <h:commandLink value="vor" action="#{lineChartBean.vor()}"/>
-            <h:outputLabel value="Name:" for="name"/>
-            <h:outputLabel id="name" value="#{lineChartBean.country.name}" size="40"/>
+    <div class="container-2" style="padding: 80px">
+        <h:outputLabel id="name" value="#{lineChartBean.country.name}" size="40" style="padding-left: 500"/>
+        <h:form>
+            <p:chart type="line" model="#{lineChartBean.lineModel}" style="height:400px;width:1000px"/>
             <h:commandLink value="zurück" action="#{lineChartBean.zurueck()}"/>
             <h:commandLink value="vor" action="#{lineChartBean.vor()}"/>
-        </h:panelGrid>
-    </h:form>
+        </h:form>
+
+    </div>
+
 </f:view>
 </html>
