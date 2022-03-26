@@ -33,10 +33,10 @@
     <div class="container-3">
         <h:panelGrid columns="2" cellpadding="5">
             <p:outputLabel for="country" value="Country: "/>
-            <p:selectOneMenu id="country" value="#{lineChartBean.country}" style="width:150px">
-<!--                <p:ajax listener="#{basicView.onCountryChange}" update="city"/>-->
+            <p:selectOneMenu id="country" value="#{dataset.countries}" style="width:150px">
+                <p:ajax listener="#{lineChartBean.init()}" update="name"/>
                 <f:selectItem itemLabel="Select Country" itemValue="" noSelectionOption="true"/>
-                <f:selectItems value="#{lineChartBean.country.name}"/>
+                <f:selectItems value="#{dataset.countries}"/>
             </p:selectOneMenu>
 
 

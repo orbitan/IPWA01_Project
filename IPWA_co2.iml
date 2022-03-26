@@ -29,6 +29,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="PrimeFaces-6.1 (2)" level="application" />
+    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.faces:javax.faces-api:2.3" level="project" />
     <orderEntry type="library" name="Maven: com.sun.faces:jsf-api:2.2.20" level="project" />
     <orderEntry type="library" name="Maven: com.sun.faces:jsf-impl:2.2.20" level="project" />

@@ -15,7 +15,7 @@ public class Dataset {
     public Dataset() {
 
         try {
-            BufferedReader bf = new BufferedReader(new FileReader("C:\\Users\\sarah\\OneDrive\\Desktop\\InfoStudium\\IPWA_co2\\src\\main\\java\\com\\example\\ipwa_co2\\data.csv"));
+            BufferedReader bf = new BufferedReader(new FileReader("/home/sarahh/Projects/IPWA01_Project/src/main/java/com/example/ipwa_co2/data.csv"));
             String line;
             String nullValue = "\"\"";
             while ((line = bf.readLine()) != null) {

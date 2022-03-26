@@ -17,7 +17,7 @@ import java.util.List;
 @ViewScoped
 public class LineChartBean {
     private LineChartModel lineModel;
-    private String name = "hss";
+
     private int index;
 
 
@@ -94,7 +94,4 @@ public class LineChartBean {
         return lineModel;
     }
 
-    public String getName() {
-        return name;
-    }
 }
