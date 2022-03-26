@@ -77,7 +77,7 @@ public class Dataset {
             index ++;
 
         };
-        this.init();
+//        this.init();
     }
 
     public void zurueck(){
