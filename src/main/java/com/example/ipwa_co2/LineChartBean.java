@@ -15,7 +15,7 @@ import java.util.List;
 
 @ManagedBean
 @ViewScoped
-public class LineChartBean {
+public class LineChartBean extends Dataset {
     private LineChartModel lineModel;
 
     private int index;
@@ -62,8 +62,8 @@ public class LineChartBean {
         s.setLabel("Kilotonnen Co2");
 
 
-        int k = 1940;
-        for(int i = 4; i<c.getAmount().size()-1; i ++){
+        int k = 1960;
+        for(int i = 4; i<c.getAmount().size()-2; i ++){
             double val6 = c.getAmount().get(i);
             s.set(k, val6);
             k ++;
@@ -75,14 +75,14 @@ public class LineChartBean {
 
         Axis y = lineModel.getAxis(AxisType.Y);
         y.setTickInterval(String.valueOf(y_max/4));
-        y.setTickCount(3);
+        y.setTickCount(5);
         y.setMin(0);
-        y.setMax(y_max + y_max/100*5);
+        y.setMax(y_max + y_max/100*4);
         y.setLabel("Kilotonnen");
 
         Axis x = lineModel.getAxis(AxisType.X);
 
-        x.setMin(1940);
+        x.setMin(1950);
         x.setMax(2020);
         x.setTickInterval("5");
         x.setLabel("Jahr");
