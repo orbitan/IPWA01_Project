@@ -8,9 +8,9 @@ import java.util.List;
 public class Country {
 
     private String name;
-    private List<Long> amount;
+    private List<Double> amount;
 
-    public Country(String name, List<Long> amount){
+    public Country(String name, List<Double> amount){
         this.name = name;
         this.amount = amount;
 
@@ -27,7 +27,7 @@ public class Country {
         this.name = name;
     }
 
-    public Long getLAmount() {
+    public Double getLAmount() {
         if (amount.get(55) == 0){
             return null;
         } else {
@@ -35,11 +35,11 @@ public class Country {
         }
     }
 
-    public List<Long> getAmount(){
+    public List<Double> getAmount(){
         return amount;
     }
 
-    public void setAmount(List<Long> amount) {
+    public void setAmount(List<Double> amount) {
         this.amount = amount;
     }
 }

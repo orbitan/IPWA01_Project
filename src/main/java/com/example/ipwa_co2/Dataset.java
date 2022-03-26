@@ -34,18 +34,20 @@ public class Dataset {
             String nullValue = "\"\"";
             while ((line = bf.readLine()) != null) {
                 List<String> tempArr = new ArrayList<>();
-                List<Long> finArr = new ArrayList<>();
+                List<Double> finArr = new ArrayList<>();
                 tempArr = List.of(line.split(","));
-                for (int i = 5; i < tempArr.size(); i +=1) {
+                for (int i = 4; i < tempArr.size(); i ++) {
                     String n = tempArr.get(i);
-                    if (Objects.equals(n, nullValue)) {
-                        n = "0";
-                    }
+//                    if (Objects.equals(n, nullValue)) {
+//                        n = "0";
+//                    }
                     String t = n.replaceAll("^\"|\"$", "");
+                    System.out.println(t);
                     try {
-                        finArr.add(Long.parseLong(t));
+                        Double k = Double.parseDouble(t);
+                        finArr.add(k);
                     } catch (NumberFormatException exc) {
-                        finArr.add((long) 0);
+                        finArr.add((double) 0);
                     }
                 }
                 countries.add(new Country(tempArr.get(0).replaceAll("^\"|\"$", ""), finArr));
