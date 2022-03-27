@@ -31,21 +31,12 @@
         </div>
     </div>
     <div class="container-3">
-        <h:panelGrid columns="2" cellpadding="5">
-<!--            <p:outputLabel for="country" value="Country: "/>
-            <p:selectOneMenu id="country" value="#{dataset.countries}" style="width:150px">
-                <p:ajax listener="#{lineChartBean.init()}" update="name"/>
-                <f:selectItem itemLabel="Select Country" itemValue="" noSelectionOption="true"/>
-                <f:selectItems value="#{dataset.countries}"/>
-            </p:selectOneMenu>-->
 
-
-        </h:panelGrid>
-        <h:outputLabel style="margin: auto;" id="name" value="#{lineChartBean.country.name}" size="40"/>
-        <p:chart type="line"  model="#{lineChartBean.lineModel}" style="height:400px;width:1000px;margin: auto"/>
+        <h:outputLabel style="margin: auto;" id="name" value="#{historyController.country.name}" size="40"/>
+        <p:chart type="line"  model="#{historyController.lineModel}" style="height:400px;width:1000px;margin: auto"/>
         <h:form style="margin: auto;">
-            <h:commandLink style="padding: 20px" value="zurück" action="#{lineChartBean.back()}"/>
-            <h:commandLink value="vor" action="#{lineChartBean.forward()}"/>
+            <h:commandLink style="padding: 20px" value="zurück" action="#{historyController.back()}"/>
+            <h:commandLink value="vor" action="#{historyController.forward()}"/>
         </h:form>
 
     </div>

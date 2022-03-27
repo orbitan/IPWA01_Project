@@ -13,7 +13,7 @@ import java.util.Collections;
 
 @ManagedBean
 @ViewScoped
-public class LineChartBean extends Dataset {
+public class HistoryController extends Dataset {
     private LineChartModel lineModel;
     private int index;
 
