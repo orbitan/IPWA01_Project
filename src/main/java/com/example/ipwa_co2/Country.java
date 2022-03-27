@@ -1,6 +1,6 @@
 package com.example.ipwa_co2;
 
-
+// hallo
 import javax.faces.bean.ManagedBean;
 import java.util.List;
 

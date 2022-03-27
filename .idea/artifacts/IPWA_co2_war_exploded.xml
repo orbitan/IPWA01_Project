@@ -27,6 +27,9 @@
           <element id="library" level="project" name="Maven: com.google.j2objc:j2objc-annotations:1.1" />
           <element id="library" level="project" name="Maven: org.codehaus.mojo:animal-sniffer-annotations:1.17" />
           <element id="library" level="project" name="Maven: javax.inject:javax.inject:1.4.2" />
+          <element id="library" level="project" name="Maven: org.sonatype.sisu:sisu-guice:3.1.0" />
+          <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
+          <element id="library" level="project" name="Maven: org.sonatype.sisu:sisu-guava:0.9.9" />
         </element>
       </element>
       <element id="directory" name="META-INF">
