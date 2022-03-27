@@ -44,8 +44,8 @@
         <h:outputLabel style="margin: auto;" id="name" value="#{lineChartBean.country.name}" size="40"/>
         <p:chart type="line"  model="#{lineChartBean.lineModel}" style="height:400px;width:1000px;margin: auto"/>
         <h:form style="margin: auto;">
-            <h:commandLink style="padding: 20px" value="zurück" action="#{lineChartBean.zurueck()}"/>
-            <h:commandLink value="vor" action="#{lineChartBean.vor()}"/>
+            <h:commandLink style="padding: 20px" value="zurück" action="#{lineChartBean.back()}"/>
+            <h:commandLink value="vor" action="#{lineChartBean.forward()}"/>
         </h:form>
 
     </div>

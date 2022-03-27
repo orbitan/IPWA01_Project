@@ -24,13 +24,13 @@ public class Dataset {
                 List<Double> finArr = new ArrayList<>();
                 tempArr = List.of(line.split(","));
 
-                    for(String s : tempArr.subList(1, tempArr.size()-2)){
-                        try {
-                            finArr.add(Double.parseDouble(s.replaceAll("^\"|\"$", "")));
-                        } catch (NumberFormatException exc) {
-                            finArr.add((double) 0);
-                        }
+                for(String s : tempArr.subList(1, tempArr.size()-2)){
+                    try {
+                        finArr.add(Double.parseDouble(s.replaceAll("^\"|\"$", "")));
+                    } catch (NumberFormatException exc) {
+                        finArr.add((double) 0);
                     }
+                }
                 this.addToCountries(tempArr.get(0), finArr);
             }
 
