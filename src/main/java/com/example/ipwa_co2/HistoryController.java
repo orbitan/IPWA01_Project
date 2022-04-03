@@ -9,13 +9,18 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import java.util.Collections;
+import java.util.List;
 
 
 @ManagedBean
 @ViewScoped
-public class HistoryController extends Dataset {
+public class HistoryController {
     private LineChartModel lineModel;
     private int index;
+
+
+
+
 
 
     @PostConstruct
@@ -25,7 +30,6 @@ public class HistoryController extends Dataset {
 
         Country c = this.getCountry();
         Double y_max = Collections.max(c.getAmount(), null);
-
 
         int k = 1960;
         for(int i = 4; i<c.getAmount().size()-2; i ++){
@@ -74,4 +78,12 @@ public class HistoryController extends Dataset {
         return Dataset.getInstance().getCountries().get(index);
     }
 
+
+    public List<Country> getCountries() {
+        return countries;
+    }
+
+    public Country getSelectedCountry(){
+        return selectedCountry;
+    }
 }

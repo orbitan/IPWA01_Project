@@ -30,6 +30,29 @@
     </div>
 
     <div class="container-3">
+        <p:selectOneMenu value="#{historyController.selectedCountry}" converter="country" var="p">
+            <f:selectItem itemLabel="Select One" itemValue="" />
+            <f:selectItems value="#{historyController.countries}" var="country" itemLabel="#{country.name}" itemValue="#{country}"/>
+            <p:column>
+                <p:graphicImage value="/images/barca/#{p.photo}" width="40" height="50"/>
+            </p:column>
+            <p:column>
+<!--                #{p.name} - #{p.number}-->
+                <f:facet name="header">
+                    <h:outputText value="Country"/>
+                </f:facet>
+            </p:column>
+
+            <f:facet name="footer">
+                <p:separator />
+                <h:outputText value="#{historyController.countries.size()} available players" style="font-weight:bold;"/>
+            </f:facet>
+        </p:selectOneMenu>
+
+
+
+
+
         <h:outputLabel style="margin: auto;" id="name" value="#{historyController.country.name}" size="40"/>
         <p:chart type="line"  model="#{historyController.lineModel}" style="height:400px;width:1000px;margin: auto"/>
         <h:form style="margin: auto;">
