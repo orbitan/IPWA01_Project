@@ -25,19 +25,19 @@
     </div>
 
     <div class="container-2">
-        <div class="image" style="padding: 100px">
-            <a href="HistoricalCourse.xhtml">
+        <a href="HistoricalCourse.xhtml">
+            <div class="image" style="padding: 100px">
                 <img class="icons" alt="icon" src="icons/time_line.png" width="128" height="128"/><br/>
-            </a>
-            <p style="padding-left: 25px">Historischer Verlauf</p>
-        </div>
+                <p style="padding-left: 25px">Historischer Verlauf</p>
+            </div>
+        </a>
 
-        <div class="image" style="padding: 100px">
-            <a href="country_table.xhtml">
+        <a href="country_table.xhtml">
+            <div class="image" style="padding: 100px">
                 <img class="icons" src="icons/graph.png" alt="logo" width="128" height="128"/><br/>
-            </a>
-            <p style="padding-left: 20px">Austoß nach Ländern</p>
-        </div>
+                <p style="padding-left: 20px">Austoß nach Ländern</p>
+            </div>
+        </a>
     </div>
 
 </body>
