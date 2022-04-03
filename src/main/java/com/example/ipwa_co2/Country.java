@@ -1,6 +1,5 @@
 package com.example.ipwa_co2;
 
-// hallo
 import javax.faces.bean.ManagedBean;
 import java.util.List;
 
@@ -15,12 +14,8 @@ public class Country {
         this.amount = amount;
 
     }
+
     public Country(){
-
-    }
-
-    public String getName() {
-        return name;
     }
 
     public void setName(String name) {
@@ -39,7 +34,8 @@ public class Country {
         return amount;
     }
 
-    public void setAmount(List<Double> amount) {
-        this.amount = amount;
+    public String getName() {
+        return name;
     }
+
 }

@@ -1,6 +1,7 @@
 package com.example.ipwa_co2;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.view.ViewScoped;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -8,7 +9,7 @@ import java.util.*;
 import java.util.List;
 
 
-
+@ViewScoped
 @ManagedBean
 public class Dataset {
     private final List<Country> countries = new ArrayList<>();
