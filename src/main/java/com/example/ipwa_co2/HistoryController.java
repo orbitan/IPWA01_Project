@@ -17,6 +17,8 @@ import java.util.List;
 public class HistoryController {
     private LineChartModel lineModel;
     private int index;
+    private List<Country> countries;
+    private Country selectedCountry;
 
 
 
