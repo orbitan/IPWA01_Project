@@ -16,15 +16,21 @@ public class Dataset {
     private static final Dataset instance = new Dataset();
 
     public Dataset() {
+
+        // Reads data from data.csv and transforms from each row a country object
         try {
+            //TODO filename should not be the absolute path
             BufferedReader bf = new BufferedReader(new FileReader("/home/sarahh/Projects/IPWA01_Project/src/main/java/com/example/ipwa_co2/data.csv"));
 
             String line;
+
+            //TODO tempArr and finArr should not exist both, so get rid of tempArr
             while ((line = bf.readLine()) != null) {
                 List<String> tempArr;
                 List<Double> finArr = new ArrayList<>();
                 tempArr = List.of(line.split(","));
 
+                // Casts each String from tempArr in Double
                 for(String s : tempArr.subList(1, tempArr.size()-2)){
                     try {
                         finArr.add(Double.parseDouble(s.replaceAll("^\"|\"$", "")));

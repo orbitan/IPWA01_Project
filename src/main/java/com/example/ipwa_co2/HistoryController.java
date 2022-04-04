@@ -16,16 +16,17 @@ import java.util.List;
 
 @ManagedBean
 @ViewScoped
+
+
 @WebServlet("/countries")
 public class HistoryController extends HttpServlet {
     private LineChartModel lineModel;
     private int index;
-    private List<Country> countries;
-    private Country selectedCountry;
-
 
     @PostConstruct
     public void init() {
+
+        //  Definition of the line chart;
         lineModel = new LineChartModel();
         LineChartSeries s = new LineChartSeries();
 
@@ -54,7 +55,10 @@ public class HistoryController extends HttpServlet {
         x.setTickInterval("5");
         x.setLabel("Jahr");
 
-        s.setLabel("Kilotonnen Co2");
+        // TODO Render "CO2" in a more appropriate way
+        s.setLabel("Kilotonnen C02");
+
+        // TODO change line color to green
         s.setSmoothLine(true);
     }
 
@@ -62,6 +66,8 @@ public class HistoryController extends HttpServlet {
         return lineModel;
     }
 
+
+    // TODO on change, only update line chart, not complete container
     public void back(){
         if (index > 0){
             index --;
@@ -72,7 +78,6 @@ public class HistoryController extends HttpServlet {
         if (index < Dataset.getInstance().getCountries().size()-1){
             index ++;
         };
-        this.init();
     }
 
     public Country getCountry(){
@@ -84,12 +89,10 @@ public class HistoryController extends HttpServlet {
         return Dataset.getInstance().getCountries();
     }
 
-    public Country getSelectedCountry(){
-        return selectedCountry;
-    }
 
+    // TODO Post Request for updating the line chart, once the user chose another country from Drop Down
     public void action(String name) {
-        System.out.println("Hello Wrld");
+        System.out.println("Hello World");
     }
 
 

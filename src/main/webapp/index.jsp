@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <!-- Page Header -->
+    <!-- TODO Find a way to include the Header of the page on all pages without implementing it on each page -->
     <div class="container">
         <div class="logo">
             <a href="index.jsp">

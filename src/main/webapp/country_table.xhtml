@@ -13,7 +13,8 @@
 
 
 <f:view>
-
+    <!-- Page Header -->
+    <!-- TODO Find a way to include the Header of the page on all pages without implementing it on each page -->
     <div class="container">
         <div class="logo">
             <a href="index.jsp">
@@ -29,18 +30,21 @@
             </ol>
         </div>
     </div>
-    <h:form>
-        <div class="card">
-            <p:dataTable var="country" value="#{dataset.countries}" sortMode="single" allowUnsorting="false">
-                <p:column sortBy="#{country.name}" headerText="Name">
-                    <h:outputText value="#{country.name}" />
-                </p:column>
 
-                <p:column sortBy="#{country.LAmount}" headerText="Amount">
-                    <h:outputText value="#{country.LAmount}" />
-                </p:column>
-            </p:dataTable>
-        </div>
+    <!-- Data table -->
+    <!-- TODO Data should come from TableController instead of Country -->
+    <!-- TODO Make countries clickable and redirect to historical course !-->
+    <h:form>
+        <p:dataTable var="country" value="#{dataset.countries}" sortMode="single" allowUnsorting="false">
+            <p:column sortBy="#{country.name}" headerText="Name">
+                <h:outputText value="#{country.name}" />
+            </p:column>
+
+            <p:column sortBy="#{country.LAmount}" headerText="Ausstoß CO2 in Kilotonnen">
+                <h:outputText value="#{country.LAmount}" />
+            </p:column>
+        </p:dataTable>
     </h:form>
+
 </f:view>
 </html>
