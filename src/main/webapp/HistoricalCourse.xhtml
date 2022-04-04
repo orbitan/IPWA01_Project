@@ -28,6 +28,9 @@
             </ol>
         </div>
     </div>
+    <h:selectOneMenu value = "#{dataset.countries}">
+        <f:selectItems value = "#{dataset.countries}" var="c" itemLabel = "#{c.name}" itemValue="#{c.name}"/>
+    </h:selectOneMenu>
 
     <div class="container-3">
         <h:outputLabel style="margin: auto;" id="name" value="#{historyController.country.name}" size="40"/>
