@@ -8,21 +8,20 @@ import org.primefaces.model.chart.LineChartSeries;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import java.util.Collections;
 import java.util.List;
 
 
 @ManagedBean
 @ViewScoped
-public class HistoryController {
+@WebServlet("/countries")
+public class HistoryController extends HttpServlet {
     private LineChartModel lineModel;
     private int index;
     private List<Country> countries;
     private Country selectedCountry;
-
-
-
-
 
 
     @PostConstruct
@@ -82,10 +81,16 @@ public class HistoryController {
 
 
     public List<Country> getCountries() {
-        return countries;
+        return Dataset.getInstance().getCountries();
     }
 
     public Country getSelectedCountry(){
         return selectedCountry;
     }
+
+    public void action(String name) {
+        System.out.println("Hello Wrld");
+    }
+
+
 }

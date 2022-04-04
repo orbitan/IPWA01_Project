@@ -28,9 +28,21 @@
             </ol>
         </div>
     </div>
-    <h:selectOneMenu value = "#{dataset.countries}">
-        <f:selectItems value = "#{dataset.countries}" var="c" itemLabel = "#{c.name}" itemValue="#{c.name}"/>
-    </h:selectOneMenu>
+
+    <h:form action="/post-name-list/names" methdod="POST">
+        <p:selectOneMenu value = "#{historyController.countries}">
+            <f:selectItems value = "#{historyController.countries}" var="c" itemLabel = "#{c.name}" itemValue="#{c.name}"/>
+            <p:divider styleClass="p-mt-0" />
+        </p:selectOneMenu>
+    </h:form>
+
+
+<!--    supposed to send a postrequest to update the line chart based on the chosen item from selectOneMenu-->
+    <h:form>
+        <h:commandLink style="padding: 20px" value="Submit" action="#{historyController.action(c.name)}"/>
+    </h:form>
+
+
 
     <div class="container-3">
         <h:outputLabel style="margin: auto;" id="name" value="#{historyController.country.name}" size="40"/>
