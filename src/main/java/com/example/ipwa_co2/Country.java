@@ -9,12 +9,12 @@ public class Country {
 
     private String name;
     private final List<Double> amount;
-    private int index;
+//    private int index;
 
-    public Country(String name, List<Double> amount, int index){
+    public Country(String name, List<Double> amount){
         this.name = name;
         this.amount = amount;
-        this.index = index;
+//        this.index = index;
 
     }
 
@@ -39,11 +39,11 @@ public class Country {
         return name;
     }
 
-    public int getIndex() {
-        return index;
-    }
-
-    public void setIndex(int index) {
-        this.index = index;
-    }
+//    public int getIndex() {
+//        return index;
+//    }
+//
+//    public void setIndex(int index) {
+//        this.index = index;
+//    }
 }

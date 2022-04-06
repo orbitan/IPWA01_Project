@@ -8,7 +8,7 @@ import org.primefaces.model.chart.LineChartSeries;
 import javax.annotation.PostConstruct;
 
 import javax.faces.bean.ManagedBean;
-import javax.faces.view.ViewScoped;
+import javax.faces.bean.ViewScoped;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import java.util.Collections;
@@ -17,7 +17,7 @@ import java.util.List;
 
 @ManagedBean
 @ViewScoped
-@WebServlet
+@WebServlet("/countries")
 public class HistoryController extends HttpServlet {
     private LineChartModel lineModel;
     private int index;
@@ -61,15 +61,15 @@ public class HistoryController extends HttpServlet {
         s.setSmoothLine(true);
     }
 
-    public int getIndex(){
-        return index;
-    }
+//    public int getIndex(){
+//        return index;
+//    }
 
-    public void setIndex(int index){
-        System.out.println("Hello World");
-        this.index = index;
+//    public void setIndex(int index){
+//        System.out.println("Hello World");
+//        this.index = index;
 
-    }
+//    }
 
 
     public LineChartModel getLineModel() {

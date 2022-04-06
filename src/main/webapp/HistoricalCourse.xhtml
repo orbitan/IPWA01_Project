@@ -35,7 +35,7 @@
     <!-- TODO Each item is supposed to be shown on one line -->
     <h:form action="/post-name-list/names" methdod="POST">
         <h:selectOneMenu value = "#{historyController.countries}">
-            <f:selectItems value = "#{historyController.countries}" var="c" itemLabel = "#{c.name}" itemValue="#{c}"/>
+            <f:selectItems value = "#{historyController.countries}" var="c" itemLabel = "#{c.name}" itemValue="#{c.name}"/>
             <p:divider styleClass="p-mt-0" />
         </h:selectOneMenu>
         <h:commandButton value="Submit" action="#{historyController.setIndex(1)}"/>

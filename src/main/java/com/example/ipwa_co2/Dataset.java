@@ -57,7 +57,7 @@ public class Dataset {
 
     public void addToCountries(String countryName, List<Double> emissions){
         counter += 1;
-        countries.add(new Country(countryName.replaceAll("^\"|\"$", ""), emissions, counter));
+        countries.add(new Country(countryName.replaceAll("^\"|\"$", ""), emissions));
     }
 
 }
