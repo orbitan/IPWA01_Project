@@ -34,10 +34,11 @@
     <!-- TODO Post request to update the linechart based on the chosen item from selectOneMenu -->
     <!-- TODO Each item is supposed to be shown on one line -->
     <h:form action="/post-name-list/names" methdod="POST">
-        <p:selectOneMenu value = "#{historyController.countries}">
-            <f:selectItems value = "#{historyController.countries}" var="c" itemLabel = "#{c.name}" itemValue="#{c.name}"/>
+        <h:selectOneMenu value = "#{historyController.countries}">
+            <f:selectItems value = "#{historyController.countries}" var="c" itemLabel = "#{c.name}" itemValue="#{c}"/>
             <p:divider styleClass="p-mt-0" />
-        </p:selectOneMenu>
+        </h:selectOneMenu>
+        <h:commandButton value="Submit" action="#{historyController.setIndex(1)}"/>
     </h:form>
 
     <!-- Forward and backwards buttons to navigate through countries -->
