@@ -14,6 +14,7 @@ import java.util.List;
 public class Dataset {
     private final List<Country> countries = new ArrayList<>();
     private static final Dataset instance = new Dataset();
+    private int counter = 0;
 
     public Dataset() {
 
@@ -55,9 +56,10 @@ public class Dataset {
     }
 
     public void addToCountries(String countryName, List<Double> emissions){
+        counter += 1;
         countries.add(new Country(countryName.replaceAll("^\"|\"$", ""), emissions));
     }
 
 }
 
-
+//t
