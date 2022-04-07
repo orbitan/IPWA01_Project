@@ -6,18 +6,17 @@ import org.primefaces.model.chart.LineChartModel;
 import org.primefaces.model.chart.LineChartSeries;
 
 import javax.annotation.PostConstruct;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import java.util.Collections;
 import java.util.List;
-
+//hi
 
 @ManagedBean
 @ViewScoped
-
-
 @WebServlet("/countries")
 public class HistoryController extends HttpServlet {
     private LineChartModel lineModel;
@@ -61,6 +60,17 @@ public class HistoryController extends HttpServlet {
         // TODO change line color to green
         s.setSmoothLine(true);
     }
+
+//    public int getIndex(){
+//        return index;
+//    }
+
+//    public void setIndex(int index){
+//        System.out.println("Hello World");
+//        this.index = index;
+
+//    }
+
 
     public LineChartModel getLineModel() {
         return lineModel;
