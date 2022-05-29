@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <!-- Page Header -->
+    <!-- TODO Find a way to include the Header of the page on all pages without implementing it on each page -->
     <div class="container">
         <div class="logo">
             <a href="index.jsp">
@@ -35,10 +36,13 @@
         <a href="country_table.xhtml">
             <div class="image" style="padding: 100px">
                 <img class="icons" src="icons/graph.png" alt="logo" width="128" height="128"/><br/>
-                <p style="padding-left: 20px">Austoß nach Ländern</p>
+                <p style="padding-left: 20px">Ausstoß nach Ländern</p>
             </div>
         </a>
     </div>
+
+
+
 
 </body>
 </html>
