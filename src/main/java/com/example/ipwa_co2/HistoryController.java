@@ -67,7 +67,7 @@ public class HistoryController extends HttpServlet {
             index --;
         }
     }
-
+// test
     public void forward(){
         if (index < Dataset.getInstance().getCountries().size()-1){
             index ++;
