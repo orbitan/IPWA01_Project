@@ -7,23 +7,28 @@ import org.primefaces.model.chart.LineChartSeries;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
+import javax.faces.bean.SessionScoped;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
 
 @ManagedBean
-@ViewScoped
+@SessionScoped
 @WebServlet("/countries")
 public class HistoryController extends HttpServlet {
     private LineChartModel lineModel;
     private int index;
     private List<Country> countries;
     private Country selectedCountry;
+    String name;
 
-// gkkfljnk
+
     @PostConstruct
     public void init() {
         lineModel = new LineChartModel();
@@ -57,6 +62,15 @@ public class HistoryController extends HttpServlet {
         s.setLabel("Kilotonnen Co2");
         s.setSmoothLine(true);
     }
+    public String getIndex(){
+        return String.valueOf(index);
+    }
+    public void setIndex(String index){
+        this.index = (Integer.parseInt(index));
+        this.init();
+    }
+
+
 
     public LineChartModel getLineModel() {
         return lineModel;
@@ -66,6 +80,8 @@ public class HistoryController extends HttpServlet {
         if (index > 0){
             index --;
         }
+        System.out.println(index);
+        this.init();
     }
 
     public void forward(){
@@ -73,6 +89,19 @@ public class HistoryController extends HttpServlet {
             index ++;
         };
         this.init();
+        System.out.println(index);
+    }
+
+    public void skipCountries(){
+        System.out.println("Hello World hihi");
+        index += 10;
+        this.init();
+    }
+
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String name = request.getParameter("name");
+        System.out.println(name);
+
     }
 
     public Country getCountry(){
@@ -90,6 +119,13 @@ public class HistoryController extends HttpServlet {
 
     public void action(String name) {
         System.out.println("Hello Wrld");
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String name = request.getParameter("vorname");
+        System.out.println(name);
     }
 
 

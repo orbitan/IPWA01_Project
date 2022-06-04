@@ -7,7 +7,7 @@
       xmlns:p="http://primefaces.org/ui">
 
 <h:head>
-    <title>Länder</title>
+    <title>Land: ${param.country}</title>
     <link href="style.css" rel="stylesheet" />
 </h:head>
 
@@ -33,13 +33,26 @@
     <!-- Dropdownmenu to choose manually the country -->
     <!-- TODO Post request to update the linechart based on the chosen item from selectOneMenu -->
     <!-- TODO Each item is supposed to be shown on one line -->
-    <h:form action="/post-name-list/names" methdod="POST">
-        <h:selectOneMenu value = "#{historyController.countries}">
-            <f:selectItems value = "#{historyController.countries}" var="c" itemLabel = "#{c.name}" itemValue="#{c.name}"/>
+    <h:form>
+        <h:selectOneMenu id="country" value = "#{historyController.index}">
+            <f:selectItems noSelectionValue="true" value = "#{historyController.countries}" var="country" itemLabel = "#{country.name}" itemValue="#{country.index}"/>
+
             <p:divider styleClass="p-mt-0" />
+            <h:commandButton id="submit-button" value="Submit" action="response.xhtml"/>
         </h:selectOneMenu>
-        <h:commandButton value="Submit" action="#{historyController.setIndex(1)}"/>
     </h:form>
+            <f:selectItems noSelectionValue="true" value = "#{historyController.countries}" var="country" itemLabel = "#{country.name}" itemValue="#{country.index}"/>
+
+            <p:divider styleClass="p-mt-0" />
+    <h:form>
+        <h:inputText id="username" value="#{historyController.index}" required="true" requiredMessage="User Name is required" /><br/>
+        <h:commandButton id="submit-button1" value="Submit" action="response.xhtml"/>
+    </h:form>
+
+
+
+
+
 
     <!-- Forward and backwards buttons to navigate through countries -->
     <div class="container-3">
@@ -50,6 +63,7 @@
             <!-- TODO Rather use primeface buttons than commandlinks -->
             <h:commandLink style="padding: 20px" value="zurück" action="#{historyController.back()}"/>
             <h:commandLink value="vor" action="#{historyController.forward()}"/>
+
         </h:form>
     </div>
 
