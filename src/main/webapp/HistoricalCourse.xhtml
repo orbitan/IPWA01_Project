@@ -33,25 +33,31 @@
     <!-- Dropdownmenu to choose manually the country -->
     <!-- TODO Post request to update the linechart based on the chosen item from selectOneMenu -->
     <!-- TODO Each item is supposed to be shown on one line -->
+    <div class="dropdown">
     <h:form>
-        <h:selectOneMenu id="country" value = "#{historyController.index}">
-            <f:selectItems noSelectionValue="true" value = "#{historyController.countries}" var="country" itemLabel = "#{country.name}" itemValue="#{country.index}"/>
+        <p:panel header="Select a Location" style="margin-bottom:10px;">
+        <h:panelGrid columns="2" cellpadding="5">
 
-            <p:divider styleClass="p-mt-0" />
-            <h:commandButton id="submit-button" value="Submit" action="response.xhtml"/>
-        </h:selectOneMenu>
+        <p:selectOneMenu id="country" value = "#{historyController.index}" style="width: 200px">
+            <f:selectItems noSelectionValue="true" value = "#{historyController.countries}" var="country" itemLabel = "#{country.name}" itemValue="#{country.index}" style="width: 100px"/>
+
+        </p:selectOneMenu>
+        </h:panelGrid>
+
+        <p:divider />
+
+        <p:commandButton id="submit-button" value="Submit" onclick="response.xhtml"/>
+
+        </p:panel>
+
     </h:form>
-            <f:selectItems noSelectionValue="true" value = "#{historyController.countries}" var="country" itemLabel = "#{country.name}" itemValue="#{country.index}"/>
+    </div>
 
-            <p:divider styleClass="p-mt-0" />
     <h:form>
         <h:inputText id="username" value="#{historyController.index}" required="true" requiredMessage="User Name is required" /><br/>
         <h:commandButton id="submit-button1" value="Submit" action="response.xhtml"/>
+
     </h:form>
-
-
-
-
 
 
     <!-- Forward and backwards buttons to navigate through countries -->

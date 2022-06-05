@@ -6,10 +6,11 @@ import org.primefaces.model.chart.LineChartModel;
 import org.primefaces.model.chart.LineChartSeries;
 
 import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -20,12 +21,11 @@ import java.util.List;
 
 @ManagedBean
 @SessionScoped
-@WebServlet("/countries")
 public class HistoryController extends HttpServlet {
     private LineChartModel lineModel;
     private int index;
     private List<Country> countries;
-    private Country selectedCountry;
+    private Country country;
     String name;
 
 
@@ -98,6 +98,16 @@ public class HistoryController extends HttpServlet {
         this.init();
     }
 
+
+    public void ajaxTest() {
+        System.out.println("Hello from AjaxTest");
+        FacesMessage msg;
+        msg = new FacesMessage(country.getName());
+        FacesContext.getCurrentInstance().addMessage(null, msg);
+
+
+    }
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("name");
         System.out.println(name);
@@ -114,7 +124,7 @@ public class HistoryController extends HttpServlet {
     }
 
     public Country getSelectedCountry(){
-        return selectedCountry;
+        return country;
     }
 
     public void action(String name) {
