@@ -36,9 +36,9 @@
     <div class="dropdown">
     <h:form>
         <p:panel header="Select a Location" style="margin-bottom:10px;">
-        <h:panelGrid columns="2" cellpadding="5">
+        <h:panelGrid columns="1" cellpadding="5">
 
-        <p:selectOneMenu id="country" value = "#{historyController.index}" style="width: 200px">
+        <p:selectOneMenu id="country" value = "#{historyController.index}">
             <f:selectItems noSelectionValue="true" value = "#{historyController.countries}" var="country" itemLabel = "#{country.name}" itemValue="#{country.index}" style="width: 100px"/>
 
         </p:selectOneMenu>
@@ -52,12 +52,6 @@
 
     </h:form>
     </div>
-
-    <h:form>
-        <h:inputText id="username" value="#{historyController.index}" required="true" requiredMessage="User Name is required" /><br/>
-        <h:commandButton id="submit-button1" value="Submit" action="response.xhtml"/>
-
-    </h:form>
 
 
     <!-- Forward and backwards buttons to navigate through countries -->
