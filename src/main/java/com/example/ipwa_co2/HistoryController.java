@@ -127,16 +127,6 @@ public class HistoryController extends HttpServlet {
         return country;
     }
 
-    public void action(String name) {
-        System.out.println("Hello Wrld");
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        String name = request.getParameter("vorname");
-        System.out.println(name);
-    }
 
 
 }
